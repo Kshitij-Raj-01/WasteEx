@@ -16,13 +16,11 @@ const Header: React.FC = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  // Admin-specific navigation items
   const adminNavItems = [
     { path: '/dashboard', label: 'Dashboard' },
     { path: '/admin', label: 'Admin Panel' }
   ];
 
-  // Seller-specific navigation items
   const sellerNavItems = [
     { path: '/dashboard', label: 'Dashboard' },
     { path: '/listings', label: 'Browse Listings' },
@@ -32,7 +30,6 @@ const Header: React.FC = () => {
     { path: '/logistics', label: 'Logistics' }
   ];
 
-  // Buyer-specific navigation items
   const buyerNavItems = [
     { path: '/dashboard', label: 'Dashboard' },
     { path: '/listings', label: 'Browse Listings' },
@@ -44,7 +41,7 @@ const Header: React.FC = () => {
 
   const getNavigationItems = () => {
     if (!user) return [];
-    
+
     switch (user.type) {
       case 'admin':
         return adminNavItems;
@@ -96,13 +93,10 @@ const Header: React.FC = () => {
                     className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-colors relative"
                   >
                     <Bell className="h-5 w-5" />
-                    {/* Notification badge */}
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                       3
                     </span>
                   </button>
-                  
-                  {/* Notification Dropdown */}
                   {showNotifications && (
                     <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
                       <div className="p-4 border-b border-gray-200">
@@ -118,7 +112,6 @@ const Header: React.FC = () => {
                         </div>
                       </div>
                       <div className="max-h-96 overflow-y-auto">
-                        {/* Sample notifications */}
                         <div className="p-4 border-b border-gray-100 hover:bg-gray-50">
                           <div className="flex items-start space-x-3">
                             <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
