@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:5000/api', // 🎯 Forward /api calls to backend
+      '/api': 'https://wasteex.onrender.com/api', // 🎯 Forward /api calls to backend
     },
   },
   optimizeDeps: {

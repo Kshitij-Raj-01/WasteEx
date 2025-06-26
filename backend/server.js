@@ -37,26 +37,26 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 // CORS configuration
-// app.use(cors({
-//   origin: process.env.NODE_ENV === 'production' 
-//     ? ['https://aquamarine-fudge-70a08f.netlify.app', 'https://wasteex.com']
-//     : ['http://localhost:5173', 'http://localhost:3000'],
-//   credentials: true
-// }));
-
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000'];
-
 app.use(cors({
-  origin: function (origin, callback) {
-    // Allow if origin is undefined (e.g., curl/Postman) or in the allowed list
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS policy: Not allowed by CORS'));
-    }
-  },
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://wasteex.vercel.app']
+    : ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true
 }));
+
+// const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000'];
+
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     // Allow if origin is undefined (e.g., curl/Postman) or in the allowed list
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('CORS policy: Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true
+// }));
 
 
 // Body parsing middleware
