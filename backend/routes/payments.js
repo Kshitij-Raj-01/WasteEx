@@ -4,7 +4,7 @@ const Payment = require('../models/Payment');
 const Contract = require('../models/Contract');
 const Shipment = require('../models/Shipment');
 const { auth, authorize } = require('../middleware/auth');
-const razorpay = require('../utils/razorpayInstance');
+const razorpay = require('../utils/RazorpayInstance');
 const crypto = require('crypto');
 
 const router = express.Router();
