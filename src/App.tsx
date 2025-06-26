@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AppProvider } from './context/AppContext';
 import Header from './components/Header';
 import LandingPage from './pages/LandingPage';
@@ -21,17 +22,6 @@ function App() {
   return (
     <AppProvider>
       <Router>
-        <div className="fixed bottom-4 right-4">
-        <a
-          href="https://bolt.new"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gray-800 hover:bg-gray-700 text-white px-3 py-1.5 rounded-full text-xs font-medium shadow-lg transition-colors duration-200 flex items-center space-x-1"
-        >
-          <span>⚡</span>
-          <span>Built with Bolt.new</span>
-        </a>
-      </div>
         <div className="min-h-screen bg-gray-50">
           <Header />
           <Routes>
