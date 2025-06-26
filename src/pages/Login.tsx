@@ -107,16 +107,6 @@ const Login: React.FC = () => {
               </Link>
             </p>
           </div>
-
-          <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-            <p className="text-sm text-blue-700 font-medium mb-2">Demo Accounts:</p>
-            <div className="text-xs text-blue-600 space-y-1">
-              <div>Seller: seller@example.com</div>
-              <div>Buyer: buyer@example.com</div>
-              <div>Admin: admin@wasteex.com</div>
-              <div className="mt-2 text-blue-500">Password: any</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
