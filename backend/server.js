@@ -38,9 +38,7 @@ app.use('/api/', limiter);
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://wasteex.vercel.app']
-    : ['http://localhost:5173', 'http://localhost:3000'],
+  origin: 'https://wasteex.vercel.app',
   credentials: true
 }));
 
