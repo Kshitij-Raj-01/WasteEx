@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { AppProvider } from './context/AppContext';
 import Header from './components/Header';
 import LandingPage from './pages/LandingPage';
@@ -42,6 +42,7 @@ function App() {
             <Route path="/notifications" element={<Notifications />} />
           </Routes>
         </div>
+        <SpeedInsights/>
       </Router>
     </AppProvider>
   );
