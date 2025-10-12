@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { AppProvider } from './context/AppContext';
 import Header from './components/Header';
@@ -41,8 +42,9 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/notifications" element={<Notifications />} />
           </Routes>
-        </div>
+        <Analytics />
         <SpeedInsights/>
+        </div>
       </Router>
     </AppProvider>
   );
