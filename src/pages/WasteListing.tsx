@@ -272,7 +272,7 @@ const WasteListing: React.FC = () => {
 
     try {
       const response = await fetch(
-        `https://api.cloudinary.com/v1_1/dg2rjn4qj/image/upload`,
+        `https://api.cloudinary.com/v1_1/dqa5ura3f/image/upload`,
         {
           method: "POST",
           body: uploadData,
@@ -311,7 +311,7 @@ const WasteListing: React.FC = () => {
 
     try {
       const response = await fetch(
-        `https://api.cloudinary.com/v1_1/dg2rjn4qj/raw/upload`,
+        `https://api.cloudinary.com/v1_1/dqa5ura3f/raw/upload`,
         {
           method: "POST",
           body: uploadData,
@@ -361,7 +361,7 @@ const WasteListing: React.FC = () => {
 
     try {
       const response = await fetch(
-        `https://api.cloudinary.com/v1_1/dg2rjn4qj/raw/upload`,
+        `https://api.cloudinary.com/v1_1/dqa5ura3f/raw/upload`,
         {
           method: "POST",
           body: uploadData,
