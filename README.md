@@ -1,68 +1,81 @@
-# ♻️ WasteEx – Global Industrial Waste Exchange Platform
+# WasteEx
 
-*Where discarded things find purpose again.*
+## Project Overview
+WasteEx is a web application designed to manage and track waste disposal and recycling activities in real-time. It aims to promote eco-friendly practices and increase awareness of waste management.
 
-WasteEx is a revolutionary platform designed to breathe life back into industrial waste streams. By connecting organizations worldwide to list, bid, and exchange surplus materials, WasteEx creates a real-time, circular economy that transforms waste into opportunity.
+## Features
+- User authentication and authorization
+- Dashboard for tracking waste metrics
+- Notifications and reminders for waste disposal timings
+- Integration with local recycling centers
+- Detailed reports and statistics
 
-## ✨ Features
-
-🌱 **Waste Listings**
-- Effortlessly create detailed listings of available waste materials.
-- Upload images to showcase materials in their true form.
-- Categorize waste by type, origin, and potential reuse.
-
-💼 **Negotiations & Contracts**
-- Initiate negotiations between buyers and sellers.
-- Exchange offers and counteroffers in a secure environment.
-- Finalize transactions with smart contracts to ensure trust and transparency.
-
-📈 **Real-Time Analytics**
-- Monitor platform activity with dynamic dashboards.
-- Gain insights into waste flows, transactions, and environmental impact.
-
-🔍 **Advanced Filtering**
-- Search and filter listings by category, location, material properties, and availability.
-
-🔗 **Blockchain Integration**
-- Leverage immutable ledgers to guarantee the authenticity and traceability of every transaction.
-
-🌍 **Global Reach**
-- Connect with companies across continents and industries.
-
-## 🛠️ Tech Stack
-
-This project is crafted with care using:
-
-- **Frontend:** React.js, Tailwind CSS
-- **Backend:** Node.js, Express.js
+## Tech Stack
+- **Frontend:** React, Redux, CSS
+- **Backend:** Node.js, Express
 - **Database:** MongoDB
-- **Blockchain:** (Optional) Ethereum / Hyperledger integration for contracts
-- **Cloud Services:** Cloudinary for image uploads
+- **Deployment:** Heroku/AWS
 
-## 🚀 Getting Started
-
-Wrap your arms around this project and set it in motion.
-
-### Prerequisites
-
-- Node.js >= 16.x
-- MongoDB running locally or in the cloud
-- (Optional) Ethereum/Hyperledger node
-
-### Installation
-
-1. **Clone the repository**
+## Installation Instructions
+1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/WasteEx.git
+   git clone https://github.com/Kshitij-Raj-01/WasteEx.git
+   ```
+2. Navigate to the project directory:
+   ```bash
    cd WasteEx
-
-2. **Install dependencies**
+   ```
+3. Install dependencies:
    ```bash
    npm install
-
-3. **Configure environment
-
-4. **Run the development server
+   ```
+4. Start the development server:
    ```bash
-   npm run dev
+   npm start
+   ```
 
+## Project Structure
+```
+WasteEx/
+│
+├── client/                # Frontend code
+│   ├── src/               # Source files
+│   ├── public/            # Static files
+│   └── package.json
+│
+└── server/                # Backend code
+    ├── src/               # Source files
+    ├── models/            # Database models
+    ├── routes/            # API routes
+    └── package.json
+```
+
+## Pages and Components
+- **Home:** User dashboard with waste metrics.
+- **Login/Signup:** Authentication pages.
+- **Reports:** View statistical data.
+- **Profile:** User settings and preferences.
+
+## API Documentation
+### Base URL
+```
+https://api.wasteex.com/v1
+```
+### Endpoints
+- `GET /waste`: Retrieve waste data.
+- `POST /waste`: Submit waste disposal information.
+- `GET /users`: Retrieve user information.
+- `POST /auth/login`: User login.
+  
+### Sample Request
+```bash
+curl -X POST https://api.wasteex.com/v1/auth/login -d '{"username":"user", "password":"pass"}'
+```
+
+## Contribution Guidelines
+We welcome contributions! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
